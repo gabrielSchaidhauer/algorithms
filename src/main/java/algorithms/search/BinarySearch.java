@@ -1,7 +1,7 @@
-package search;
+package algorithms.search;
 
 /*
- * Binary search is a performant algorithm to search for a specific item on ordered lists
+ * Binary algorithms.search is a performant algorithm to algorithms.search for a specific item on ordered lists
  *
  * This algorithm uses the preconception that the list is ordered to prevent
  * the need of checking each item on the list. It works by always cutting the array or list
@@ -11,7 +11,7 @@ package search;
  * find their index for direct access.
  *
  * In more real world examples we could for instance get a list of ordered objects based on a attribute
- * and then perform a binary search using this attribute as criteria reducing the amount of iterations needed.
+ * and then perform a binary algorithms.search using this attribute as criteria reducing the amount of iterations needed.
  *
  * This is a great algorithm to use when we already have ordered lists or we can order our lists with performances below
  * 'n'
