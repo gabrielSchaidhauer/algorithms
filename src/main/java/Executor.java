@@ -1,10 +1,19 @@
 import algorithms.search.BinarySearch;
+import algorithms.sort.QuickSort;
 import structures.LinkedList;
+
+import java.util.Arrays;
 
 public class Executor {
   public static void main(String... args) {
     //binarySearch();
-    linkedList();
+    //linkedList();
+    quicksort();
+  }
+
+  public static void quicksort() {
+    int[] sorted = QuickSort.sort(new int[] {300,37, 350, 1,2, 150, 35, 5, 37, 400, 6, 3, 22, 4, 44, 20, 16, 14});
+    System.out.println(Arrays.toString(sorted));
   }
 
   public static void binarySearch() {
