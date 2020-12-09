@@ -1,6 +1,7 @@
 package structures;
 
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 /*
  * This is the implementation of a linked list, this data structure
@@ -73,6 +74,34 @@ public class LinkedList<T> {
         current = current.getPrevious();
       } while (current != null);
     }
+  }
+
+  public boolean exists(Function<T, Boolean> check) {
+    if (first != null) {
+      Node<T> current = first;
+      do {
+        if (check.apply(current.getItem())) {
+          return true;
+        }
+        current = current.getNext();
+      } while (current != null);
+    }
+
+    return false;
+  }
+
+  public T findFirst(Function<T, Boolean> check) {
+    if (first != null) {
+      Node<T> current = first;
+      do {
+        if (check.apply(current.getItem())) {
+          return current.getItem();
+        }
+        current = current.getNext();
+      } while (current != null);
+    }
+
+    return null;
   }
 
   public long size() {

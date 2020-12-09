@@ -1,5 +1,6 @@
 import algorithms.search.BinarySearch;
 import algorithms.sort.QuickSort;
+import structures.HashMap;
 import structures.LinkedList;
 
 import java.util.Arrays;
@@ -8,7 +9,18 @@ public class Executor {
   public static void main(String... args) {
     //binarySearch();
     //linkedList();
-    quicksort();
+    //quicksort();
+    hashmap();
+  }
+
+  public static void hashmap() {
+    HashMap<String, String> myMap = new HashMap<>();
+    for (int i = 0; i < 250; i++ ) {
+      myMap.put(String.valueOf(i), String.valueOf(i));
+    }
+
+    System.out.println(myMap.get("50"));
+    System.out.println(myMap.toString());
   }
 
   public static void quicksort() {
